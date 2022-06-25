@@ -21,19 +21,27 @@ export function Lesson(props: LessonProps) {
 
 
   return (
-   <Link to={`/event/lesson/${props.slug}`} className="group">
+
+  /*  <Link to={`/event/lesson/${props.slug}`} className="group"> */
+    <Link to={`${isLessonAvailable ? `/event/lesson/${props.slug}` : '#'}`} className="group">
+    
     <span className="text-gray-300">
     { availableDateFormatted}
      {/* {props.availableAt.toString()} */}
       </span>
+    
+    <div 
+        className={classNames('rounded border border-gray-500 p-4 mt-2 relative group-hover:border-green-500', {
+          'bg-green-500': isActiveLesson,
+          'bg-transparent': !isLessonAvailable,
+        })}
+      >
+        
+        <div className={classNames('absolute left-0 top-[calc(50%-10px)] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-[13.75px] h-[13.75px] bg-green-500 group-hover:w-4 group-hover:h-4', {
+          'block': isActiveLesson,
+          'hidden': !isActiveLesson || !isLessonAvailable,
+        })} />
 
-           
-    <div className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500',
-    { 'bg-green-500': isActiveLesson,
-    'bg-transparent': !isActiveLesson,
-      
-    })}
-    >  
       <header className="flex items-center justify-between">
         {isLessonAvailable ? (
           <span 
