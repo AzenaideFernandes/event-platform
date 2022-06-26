@@ -1242,7 +1242,7 @@ export type Lesson = Node & {
   /** The time the document was published. Null on documents in draft stage. */
   publishedAt?: Maybe<Scalars['DateTime']>;
   title: Scalars['String'];
-  slug?: Maybe<Scalars['String']>;
+  slug: Scalars['String'];
   description?: Maybe<Scalars['String']>;
   /** The ID of the Youtube video. */
   videoId: Scalars['String'];
@@ -1332,7 +1332,7 @@ export type LessonCreateInput = {
   createdAt?: InputMaybe<Scalars['DateTime']>;
   updatedAt?: InputMaybe<Scalars['DateTime']>;
   title: Scalars['String'];
-  slug?: InputMaybe<Scalars['String']>;
+  slug: Scalars['String'];
   description?: InputMaybe<Scalars['String']>;
   videoId: Scalars['String'];
   availableAt?: InputMaybe<Scalars['DateTime']>;
@@ -5591,7 +5591,7 @@ export type GetLessonBySlugQuery = { __typename?: 'Query', lesson?: { __typename
 export type GetLessonsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetLessonsQuery = { __typename?: 'Query', lessons: Array<{ __typename?: 'Lesson', id: string, lessonType: LessonType, availableAt?: any | null, title: string, slug?: string | null }> };
+export type GetLessonsQuery = { __typename?: 'Query', lessons: Array<{ __typename?: 'Lesson', id: string, lessonType: LessonType, availableAt?: any | null, title: string, slug: string }> };
 
 
 export const CreateSubscriberDocument = gql`
