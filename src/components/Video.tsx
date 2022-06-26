@@ -5,7 +5,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-reac
 import '@vime/core/themes/default.css';
 
 
-const GET_LESSON_BY_SLUG_QUERY = gql`
+/* const GET_LESSON_BY_SLUG_QUERY = gql`
   query GetLessonBySlug ($slug: String) {
     lesson(where: {slug:$slug}) {
       title
@@ -17,9 +17,10 @@ const GET_LESSON_BY_SLUG_QUERY = gql`
         name
       }
     }
-  }
-`
-interface GetLessonBySlugResponse {
+  } 
+`*/
+
+/* interface GetLessonBySlugResponse {
   lesson: {
     title: string;
     videoId: string
@@ -30,7 +31,7 @@ interface GetLessonBySlugResponse {
       name: string;
     }
   }
-}
+} */
 
 interface VideoProps {
   lessonSlug: string;
