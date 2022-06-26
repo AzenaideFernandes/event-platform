@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
+
 /* const CREATE_SUBSCRIBER_MUTATION = gql`
   mutation CreateSubscriber($name:String!,$email:String!){
       createSubscriber(data: {name:$name, email:$email}) {
@@ -77,7 +78,8 @@ export function Subscribe() {
         </div>
 
       </div>
-      <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+      {/* <img src="/src/assets/code-mockup.png" className="mt-10" alt="" /> */}
+      <img src="/assets/code-mockup.png" className="mt-10" alt="" />
    </div>
   )
 
